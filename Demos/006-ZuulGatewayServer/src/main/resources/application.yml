@@ -1,0 +1,13 @@
+server:
+  port: 8765
+
+zuul:
+  routes:
+    account:
+      path: /account/**
+      serviceId: account-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false   
